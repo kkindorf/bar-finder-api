@@ -7,7 +7,7 @@ const router = require('./router');
 const mongoose = require('mongoose');
 const cors = require('cors');
 //DB setup
-mongoose.connect('mongodb://kkindorf:Zooniebin9765@ds217310.mlab.com:17310/bar-finder');
+mongoose.connect('mongodb://'+process.env.username+':'+process.env.password+'@ds217310.mlab.com:17310/bar-finder');
 //app setup
 
 app.use(morgan('combined'));
