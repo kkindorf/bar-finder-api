@@ -1,6 +1,6 @@
 const Bar = require('../models/bar');
 const yelp = require('yelp-fusion');
-const client = yelp.client('qaGd6x9afdwHUx62I_jU64xcrm2ymtWaQxjgE5sJZh6sUWtn8LDZzac7zndrJJdjcA3J1L-77LdT_Gz6i6Lhk8a4xNPELNmPUqkBnCg_HKBGEw9AEr1mQbs7HdPkWnYx');
+const client = yelp.client(process.env.yelpAPI);
 exports.barQuery = function(req, res, next) {
     //use business alias instead of id
     const query = req.params.query;
